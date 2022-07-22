@@ -4,7 +4,7 @@ public class FuncionarioCLT extends Funcionario{
 
 protected double vlSalarioProdutividade;
 
-public FuncionarioCLT(int matricula,String nome,String sgEstadoNascimento,String sgDepartamento,double vlSalarioBase,int qtFilhos){
+public FuncionarioCLT(String matricula,String nome,String sgEstadoNascimento,String sgDepartamento,double vlSalarioBase,int qtFilhos){
   super(matricula,nome,sgEstadoNascimento,sgDepartamento,vlSalarioBase,qtFilhos);
   this.vlSalarioProdutividade=500;
   this.txINSS=20;
@@ -12,13 +12,14 @@ public FuncionarioCLT(int matricula,String nome,String sgEstadoNascimento,String
 }
 
   public void calculaSalario(){
-    this.vlSalarioLiquido = this.vlSalarioBase-(this.vlSalarioBase*this.txINSS/100)+(qtFilhos*100) + this.vlSalarioProdutividade; 
+    double vlSalarioconjunto=this.vlSalarioBase+(qtFilhos*100)+this.vlSalarioProdutividade; 
+    this.vlSalarioLiquido = vlSalarioconjunto-(vlSalarioconjunto*this.txINSS/100);
   }
 
-  public void calculaAumentoSalarial(int matricula,double percentual){
+  public void calculaAumentoSalarial(String matricula,double percentual){
     this.vlSalarioBase = this.vlSalarioBase*(1+percentual/100);
   }
-  public void calculaAumentoSalarial(double valorDeAumento,int matricula){
+  public void calculaAumentoSalarial(double valorDeAumento,String matricula){
     this.vlSalarioBase = this.vlSalarioBase+valorDeAumento;
   }
 

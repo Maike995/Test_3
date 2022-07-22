@@ -1,7 +1,7 @@
 
 public abstract class Funcionario{
 
-  protected int matricula;
+  protected String matricula;
   protected String nome;
   protected String sgEstadoNascimento;
   protected String sgDepartamento;
@@ -12,7 +12,7 @@ public abstract class Funcionario{
 
   public abstract void calculaSalario();
 
-  public Funcionario(int matricula,String nome,String sgEstadoNascimento,String sgDepartamento,double vlSalarioBase,int qtFilhos){
+  public Funcionario(String matricula,String nome,String sgEstadoNascimento,String sgDepartamento,double vlSalarioBase,int qtFilhos){
 
     this.matricula=matricula;
     this.nome=nome;
