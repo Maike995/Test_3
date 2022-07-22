@@ -1,69 +1,21 @@
 /*
-3 - Defina uma interface com o nome Jogo. Crie os métodos iniciar(), jogar() e finalizar(). 
-A seguir:
-- crie uma classe abstrata com o nome JogoComBola e faça-a implementar a interface Jogo.
-- crie um método abstrato denominado setNomesEquipes(String equipe1, String equipe2). 
-- crie uma classe com o nome Futebol e faça-a herdar da classe JogoComBola.
-- repare que, por se tratar de uma classe concreta, você será obrigado pelo compilador a implementar os métodos da classe abstrata e também os métodos definidos na interface. 
-- coloque implementações simples nestes métodos como mensagens, por exemplo. 
-- crie uma classe com o nome Vôlei nos mesmos moldes da classe Futebol.
-- crie uma classe abstrata com o nome JogoDeCartas e faça-a herdar da interface Jogo.
-- crie um método abstrato qtdCartasDistribuidas() com o retorno do tipo inteiro. 
-- crie outro método abstrato com o nome numeroParticipantes() também com retorno inteiro.
-- crie uma classe concreta denominada Truco herdando de JogoDeCartas. 
-- implemente de maneira simples os métodos da interface Jogo e da classe abstrata JogoDeCartas.*/
+07 - Crie uma classe para testar as classes criadas acima com 3 objetos da classe FuncionarioCLT (matrículas 1, 2, 3) e
+3 objetos da classe FuncionarioTemp (matrículas 4, 5, 6). Adicione em um vetor conforme a aula do dia 11/07 do
+material: 22 - s03e16 - Operador InstanceOf.
+08 - O funcionário com matrícula 1 deve receber um aumento salarial de 50% e o funcionário com matrícula 2 deve
+receber um aumento de R$ 1000,00.
+*/
 
 class Main {
   public static void main(String[] args) {
     System.out.println();
 
-    Futebol f1 = new Futebol();
-    Futebol f2 = new Futebol();
-    Volei v1 = new Volei();
-    Volei v2 = new Volei();
-    Truco t1 = new Truco(4);
-    Truco t2 = new Truco(8);
-
-System.out.println("Futebol_1");
-    f1.setNomesEquipes("Libertadores","Condenados");
-    f1.iniciar();
-    f1.jogar();
-    f1.finalizar();
-    System.out.println();
-System.out.println("Futebol_2");
-    f2.setNomesEquipes("Plantas","Zumbis");
-    f2.iniciar();
-    f2.jogar();
-    f2.finalizar();
-    System.out.println();
-System.out.println("Volei_1");
-    v1.setNomesEquipes("Humanos","Macacos");
-    v1.iniciar();
-    v1.jogar();
-    v1.finalizar();
-    System.out.println();
-System.out.println("Volei_2");
-    v2.setNomesEquipes("Touro","Leões");
-    v2.iniciar();
-    v2.jogar();
-    v2.finalizar();
-    System.out.println();
-System.out.println("Truco_1");
-    System.out.println("Numero De Participantes: "+t1.numeroParticipantes());
-    System.out.println("Numero De Cartas Distribuidas: "+t1.qtdCartasDistribuidas());
-    t1.iniciar();
-    t1.jogar();
-    t1.finalizar();
-    System.out.println();
-System.out.println("Truco_2");
-    System.out.println("Numero De Participantes: "+t2.numeroParticipantes());
-    System.out.println("Numero De Cartas Distribuidas: "+t2.qtdCartasDistribuidas());
-    t2.iniciar();
-    t2.jogar();
-    t2.finalizar();
-    
-    
-
+            FuncionarioCLT r1 = new FuncionarioCLT(1,"Maria","SA","QA",4500,0);
+            FuncionarioCLT r2 = new FuncionarioCLT(2,"Pedro","SE","QB",5000,1);
+            FuncionarioCLT r3 = new FuncionarioCLT(3,"Carla","SI","QC",5000,2);
+            FuncionarioTemp c1 = new FuncionarioTemp(4,"Paulo","SO","QD",2800,1);
+            FuncionarioTemp c2 = new FuncionarioTemp(5,"André","SU","QE",3500,2);
+            FuncionarioTemp c3 = new FuncionarioTemp(6,"Pablo","SS","QF",4200,3);
 
 
     
