@@ -24,6 +24,9 @@ public FuncionarioCLT(int matricula,String nome,String sgEstadoNascimento,String
 
 
 
+  public String toString(){
+    return "Tipo Func. : FuncionarioCLT  | Matricula: "+matricula+" |Nome: "+nome+" |Sal. Base: "+vlSalarioBase+" | Num. Filhos: "+qtFilhos+" | Sal. Liquido: "+vlSalarioLiquido;
+  }
   
   
 }

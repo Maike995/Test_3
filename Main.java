@@ -28,14 +28,44 @@ class Main {
   public static void main(String[] args) {
     System.out.println();
 
-            FuncionarioCLT r1 = new FuncionarioCLT(1,"Maria","SA","QA",4500,0);
-            FuncionarioCLT r2 = new FuncionarioCLT(2,"Pedro","SE","QB",5000,1);
-            FuncionarioCLT r3 = new FuncionarioCLT(3,"Carla","SI","QC",5000,2);
-            FuncionarioTemp c1 = new FuncionarioTemp(4,"Paulo","SO","QD",2800,1);
-            FuncionarioTemp c2 = new FuncionarioTemp(5,"André","SU","QE",3500,2);
-            FuncionarioTemp c3 = new FuncionarioTemp(6,"Pablo","SS","QF",4200,3);
+            Funcionario Empresa[] = new Funcionario[5];
+    
+            FuncionarioCLT c1 = new FuncionarioCLT(1,"Maria","SA","QA",4500,0);
+            FuncionarioCLT c2 = new FuncionarioCLT(2,"Pedro","SE","QB",5000,1);
+            FuncionarioCLT c3 = new FuncionarioCLT(3,"Carla","SI","QC",5000,2);
+            FuncionarioTemp t1 = new FuncionarioTemp(4,"Paulo","SO","QD",2800,1);
+            FuncionarioTemp t2 = new FuncionarioTemp(5,"André","SU","QE",3500,2);
+            FuncionarioTemp t3 = new FuncionarioTemp(6,"Pablo","SS","QF",4200,3);
 
+    c1.calculaSalario();
+    c2.calculaSalario();
+    c3.calculaSalario();
+    t1.calculaSalario();
+    t2.calculaSalario();
+    t3.calculaSalario();
+
+    Empresa[0]=c1;
+    Empresa[1]=c2;
+    Empresa[2]=c3;
+    Empresa[3]=t1;
+    Empresa[4]=t2;
+    Empresa[5]=t3;
+   
 
     
-  }
-}
+    c1.calculaAumentoSalarial(1,50.0);
+    c2.calculaAumentoSalarial(1000.0,2);
+
+    c1.calculaSalario();
+    c2.calculaSalario();
+    
+    System.out.println(c1.toString());
+    System.out.println(c2.toString());
+    System.out.println(c3.toString());
+    System.out.println(t1.toString());
+    System.out.println(t2.toString());
+    System.out.println(t3.toString());
+   
+    
+                                                 
+  }}
