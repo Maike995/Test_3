@@ -17,10 +17,14 @@ public FuncionarioCLT(String matricula,String nome,String sgEstadoNascimento,Str
   }
 
   public void calculaAumentoSalarial(String matricula,double percentual){
+    if(this.matricula == matricula) {
     this.vlSalarioBase = this.vlSalarioBase*(1+percentual/100);
+    }
   }
   public void calculaAumentoSalarial(double valorDeAumento,String matricula){
+    if(this.matricula == matricula) {
     this.vlSalarioBase = this.vlSalarioBase+valorDeAumento;
+    }
   }
 
 
